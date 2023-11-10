@@ -1,7 +1,7 @@
 ---
 name: Homework 8
 tools: [Python, HTML, vega-lite]
-image: assets/pngs/cars.png
+image: assets/pngs/hw8.png
 description: Homework 8 for IS 445
 custom_js:
   - vega.min
@@ -28,6 +28,14 @@ This visualization is of the Mean of Square footage of the buildings constructed
 - **Encoding Types:**
   - X-axis represents the Year of Construction, chosen type : temporal.
   - Y-axis represents the Mean of Square footage of buildings., chosen type : quantitative.
+<div class="left">
+{% include elements/button.html link="https://github.com/JigyashuSaravta/JigyashuSaravta.github.io/blob/main/assets/json/chart1.json" text="The Data" %}
+</div>
+
+<div class="right">
+{% include elements/button.html link="https://github.com/JigyashuSaravta/JigyashuSaravta.github.io/blob/main/python_notebooks/Workbook.ipynb" text="The Notebook" %}
+</div>
+
 <br>
 <br>
 ## Viz 2
@@ -65,9 +73,9 @@ The pie chart shows distribution of the buildings based on its status, i.e In Us
 <!-- these are written in a combo of html and liquid --> 
 
 <div class="left">
-{% include elements/button.html link="https://github.com/vega/vega/blob/main/docs/data/cars.json" text="The Data" %}
+{% include elements/button.html link="https://github.com/JigyashuSaravta/JigyashuSaravta.github.io/blob/main/assets/json/chart3.json" text="The Data" %}
 </div>
 
 <div class="right">
-{% include elements/button.html link="https://github.com/jnaiman/online_cv_public/blob/main/python_notebooks/test_generate_plots.ipynb" text="The Analysis" %}
+{% include elements/button.html link="https://github.com/JigyashuSaravta/JigyashuSaravta.github.io/blob/main/python_notebooks/Workbook.ipynb" text="The Notebook" %}
 </div>
