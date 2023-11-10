@@ -11,36 +11,56 @@ custom_js:
 ---
 
 
-# Example including vega-lite
+# Homework 8
+## Viz 1
 
-Example comes from this [great blog post right here](https://blog.4dcu.be/programming/2021/05/03/Interactive-Visualizations.html) that was also used in [our test import script](https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/blob/main/week01/test_imports_week01.ipynb).
-
-We can use a vegachart HTML tag like so:
-
-```
-<vegachart schema-url="{{ site.baseurl }}/assets/json/cars.json" style="width: 100%"></vegachart>
-```
-
+<br>
 <vegachart schema-url="{{ site.baseurl }}/assets/json/chart1.json" style="width: 100%"></vegachart>
 <br>
+
+### Line Chart:
+
+#### Description:
+This visualization is of the Mean of Square footage of the buildings constructed in a particular year. One can explore how the trend is moving as and when the years increase. We can observe that for olden times, propersties had a higher square footage, as there was a lot of land available and real estate market wasn’t properly established. However as we come towards recent years, the mean of square footage drastically decreases as demand for houses grow due to population increase as well as real estate market. One thing I would like to change if I had more time is the data, it requires cleaning, and pre-processing.
+
+#### Design Choices:
+- Vizualization done using vegalite then used Python+Altair to read the dictionary and convert it into a JSON file.
+- **Encoding Types:**
+  - X-axis represents the Year of Construction, chosen type : temporal.
+  - Y-axis represents the Mean of Square footage of buildings., chosen type : quantitative.
+<br>
+<br>
+## Viz 2
+<br>
+
 <vegachart schema-url="{{ site.baseurl }}/assets/json/chart3.json" style="width: 100%"></vegachart>
 
-In theory, you can also use [Jekyll hooks](https://jekyllrb.com/docs/plugins/hooks/) to do it, but I haven't figured out a way that looks nice yet.
+<br>
 
+### Pie Chart:
 
-## Search The Data & Methods
+#### Description:
+The pie chart shows distribution of the buildings based on its status, i.e In Use, Abandon, In Progress. for a more focused analysis.
 
-Below is where we can put some links to both the data and the analysis code as buttons:
+#### Design Choices:
+- Vizualization done using Python+Altair and then exported to JSON.
+- **Encoding Types:**
+  - Theta (angle) encodes the count of number of buildings of current status.
+  - Color distinguishes different status of buildings.
+  - Selected type is highlighted and others are greyed.
+  - Tooltip includes count for additional information.
 
-```
-<div class="left">
-{% include elements/button.html link="https://github.com/vega/vega/blob/main/docs/data/cars.json" text="The Data" %}
-</div>
+- **Color Scheme:**
+  - A general color scheme is used to differentiate the status.
 
-<div class="right">
-{% include elements/button.html link="https://blog.4dcu.be/programming/2021/05/03/Interactive-Visualizations.html" text="The Analysis" %}
-</div>
-```
+#### Data Transformations:
+- The count of buuldings is calculated from the dataset.
+
+#### Interactivity:
+- Users can select specific status by clicking on the legend.
+- Selection highlights chosen status, aiding in a more detailed analysis.
+- Tooltip complements the selection interaction by showing the license type and count.
+- To de-select, click on anything outside the legend.
 
 <!-- these are written in a combo of html and liquid --> 
 
