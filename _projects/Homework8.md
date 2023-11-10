@@ -1,8 +1,8 @@
 ---
-name: Vega Lite Example Project
+name: Homework 8
 tools: [Python, HTML, vega-lite]
 image: assets/pngs/cars.png
-description: This is a "showcase" project that uses vega-lite for interactive viz!
+description: Homework 8 for IS 445
 custom_js:
   - vega.min
   - vega-lite.min
